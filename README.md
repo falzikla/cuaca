@@ -1,2 +1,2 @@
 # cuaca
-Kode wevb untuk aplikasi cuaca menggunakan API OpenWeatherMap
+Kode web untuk aplikasi cuaca menggunakan API OpenWeatherMap
