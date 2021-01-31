@@ -1,4 +1,4 @@
-var key = "#";
+var key = "f809df28f25769d78b24c4d7d735dc86";
 var kota = "Kangboi";
 var cuacaIkonURL = "https://openweathermap.org/img/wn/";
 
@@ -21,7 +21,6 @@ cuaca.addEventListener("load", () => {
     document.getElementById("nama").innerHTML+=" "+kodeIkon.name;
     document.getElementById("suhu").innerHTML+=" "+Math.floor(suhuC)+" C&#176;";
     document.getElementById("desk").innerHTML+=" "+kodeIkon.weather[0].description;
-    //document.getElementById("desks").innerHTML+=" "+kodeIkon.weather[0].main;
     document.getElementById("ikon").innerHTML +=" <img class=\"cuac tengahIkons\" src="+hasilIkonCuaca+"></img>";
     document.getElementById("wind").innerHTML+=" "+kodeIkon.wind.speed+" m/s";
     document.getElementById("teka").innerHTML+=" "+kodeIkon.main.pressure+" hPa";
@@ -30,7 +29,5 @@ cuaca.addEventListener("load", () => {
     document.getElementById("angi").innerHTML+=" "+kodeIkon.wind.deg+"&#176";
     document.getElementById("pand").innerHTML+=" "+kodeIkon.visibility+" m";
     document.getElementById("humi").innerHTML+=" "+kodeIkon.main.humidity+" %";
-    document.getElementById("nega").innerHTML+=" "+kodeIkon.sys.country;     
-
-    //console.log(kodeIkon);
+    document.getElementById("nega").innerHTML+=", "+kodeIkon.sys.country;
 });
