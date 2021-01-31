@@ -1,6 +1,6 @@
 var kota = "Kangboi";
 var bahasa = "id";
-var kunci = "f809df28f25769d78b24c4d7d735dc86";
+var kunci = "#";
 var satuan = "metric";
 var ikonCuaca = "https://openweathermap.org/img/wn/";
 var batas = 30;

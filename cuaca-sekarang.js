@@ -1,4 +1,4 @@
-var key = "f809df28f25769d78b24c4d7d735dc86";
+var key = "#";
 var kota = "Kangboi";
 var cuacaIkonURL = "https://openweathermap.org/img/wn/";
 
