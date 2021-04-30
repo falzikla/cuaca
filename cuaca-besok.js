@@ -18,85 +18,58 @@ cuacas.addEventListener("load", () => {
         var hariBesok = new Date().getDay() + 1;    ///Penambahan///
         var hariLusa = new Date().getDay() + 2;     ///Penambahan///
         var hariTulat = new Date().getDay() + 3;    ///Penambahan///
-        var hariBesoks = new Date().getDay() - new Date().getDay();     ///Pengurangan///
-        var hariLusas = new Date().getDay() - 5;    ///Pengurangan///
-        var hariTulats = new Date().getDay() - 4;   ///Pengurangan///
 
         var kodeNomorCuaca = cuacca.list[i].weather[0].icon;
 
         var hasilIkon = ikonCuaca + kodeNomorCuaca + ".png"
         ///Mulai///
-        if (hariCuacaBesok == 4) {  ///Kamis
-            if (hariCuacaBesok == hariIni) {
-                konversiDt(cuacca.list[i].dt, "waktuIni");
-                document.getElementById("waktuIni").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariBesok) {
-                konversiDt(cuacca.list[i].dt, "waktuBesok");
-                document.getElementById("waktuBesok").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }  else 
-            if (hariCuacaBesok == hariLusa) {
-                konversiDt(cuacca.list[i].dt, "waktuLusa");
-                document.getElementById("waktuLusa").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariTulat || hariCuacaBesok == hariBesoks ) {
-                konversiDt(cuacca.list[i].dt, "waktuTulat");
-                document.getElementById("waktuTulat").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) + "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }
-        } else 
-        if (hariCuacaBesok == 5) {  ///Jum'at
-            if (hariCuacaBesok == hariIni) {
-                konversiDt(cuacca.list[i].dt, "waktuIni");
-                document.getElementById("waktuIni").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariBesok) {
-                konversiDt(cuacca.list[i].dt, "waktuBesok");
-                document.getElementById("waktuBesok").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }  else 
-            if (hariCuacaBesok == hariLusa || hariCuacaBesok == hariBesoks ) {
-                konversiDt(cuacca.list[i].dt, "waktuLusa");
-                document.getElementById("waktuLusa").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariTulat || hariCuacaBesok == hariLusas ) {
-                konversiDt(cuacca.list[i].dt, "waktuTulat");
-                document.getElementById("waktuTulat").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) + "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }
-        } else 
-        if (hariCuacaBesok == 6) {  ///Sabtu
-            if (hariCuacaBesok == hariIni) {
-                konversiDt(cuacca.list[i].dt, "waktuIni");
-                document.getElementById("waktuIni").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariBesok || hariCuacaBesok == hariBesoks) {
-                konversiDt(cuacca.list[i].dt, "waktuBesok");
-                document.getElementById("waktuBesok").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }  else 
-            if (hariCuacaBesok == hariLusa || hariCuacaBesok == hariLusas ) {
-                konversiDt(cuacca.list[i].dt, "waktuLusa");
-                document.getElementById("waktuLusa").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariTulat || hariCuacaBesok == hariTulats ) {
-                konversiDt(cuacca.list[i].dt, "waktuTulat");
-                document.getElementById("waktuTulat").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) + "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }
-        } else {    /// Sekarang
-            if (hariCuacaBesok == hariIni) {
-                konversiDt(cuacca.list[i].dt, "waktuIni");
-                document.getElementById("waktuIni").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariBesok) {
-                konversiDt(cuacca.list[i].dt, "waktuBesok");
-                document.getElementById("waktuBesok").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }  else 
-            if (hariCuacaBesok == hariLusa) {
-                konversiDt(cuacca.list[i].dt, "waktuLusa");
-                document.getElementById("waktuLusa").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +"<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            } else 
-            if (hariCuacaBesok == hariTulat) {
-                konversiDt(cuacca.list[i].dt, "waktuTulat");
-                document.getElementById("waktuTulat").innerHTML += "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) + "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
-            }
+        // konversiDt(cuacca.list[i].dt, "waktuIni");
+        // document.getElementById("waktuIni").innerHTML += 
+        // "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + 
+        // "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + 
+        // "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +
+        // "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
+        
+        if (hariCuacaBesok == hariAngka(0)) {
+            konversiDt(cuacca.list[i].dt, "waktuIni");
+            document.getElementById("waktuIni").innerHTML += 
+            "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + 
+            "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + 
+            "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +
+            "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
+        } else
+        if ( hariCuacaBesok == hariAngka(1)) {
+            konversiDt(cuacca.list[i].dt, "waktuBesok");
+            document.getElementById("waktuBesok").innerHTML += 
+            "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + 
+            "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + 
+            "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +
+            "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
+        } else
+        if ( hariCuacaBesok == hariAngka(2)) {
+            konversiDt(cuacca.list[i].dt, "waktuLusa");
+            document.getElementById("waktuLusa").innerHTML += 
+            "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + 
+            "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + 
+            "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +
+            "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
+        } else
+        if ( hariCuacaBesok == hariAngka(3)) {
+            konversiDt(cuacca.list[i].dt, "waktuTulat");
+            document.getElementById("waktuTulat").innerHTML += 
+            "<img class=\"tengahIkon\" src="+hasilIkon+"></img>" + 
+            "<br>Cuaca : " + terjemahCuaca(cuacca.list[i].weather[0].main) + 
+            "<br>Deskripsi : " + terjemahCuacaDeskripsi(cuacca.list[i].weather[0].description) +
+            "<br>Suhu : " + Math.floor(cuacca.list[i].main.temp)+" C&#176;" + "<br><br>";
         }
+
+
+
+        console.log(hariCuacaBesok);
+
         ///Akhir///
     }
+
+    // console.log(cuacca);
+    
 });

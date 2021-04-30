@@ -55,7 +55,7 @@ function konversiDt(dtBesok, pesan) {
     var tahun = waktu.getFullYear();
     var bulan = waktu.getMonth();
 
-    var namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Juma'at", "Sabtu"];
+    var namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
     var namaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "Oktober", "November", "Desember"];
 
     var waktuHasilTanggal = namaHari[hari] + ", " + tanggal + " " + namaBulan[bulan] + " " + tahun;
@@ -194,3 +194,23 @@ function terjemahCuacaDeskripsi (bahasa) {
         return "Kesalahan";
     }
 }
+
+function hariAngka (angka) {
+    let hari = new Date().getDay();
+    let depan = hari + angka;
+    if (depan == 7 ) {
+        return depan = 0;
+    } else
+    if (depan == 8) {
+        return depan = 1;
+    } else
+    if (depan == 9) {
+        return depan = 2;
+    } else
+    if (depan == 10) {
+        return depan = 3;
+    } else {
+        return depan;
+    }
+}
+
